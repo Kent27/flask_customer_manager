@@ -1,0 +1,321 @@
+{
+	"info": {
+		"_postman_id": "498f03ac-6606-4fd1-a008-2b523e5c6a4a",
+		"name": "CustomerManager",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "kentkent2797@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"login"
+					]
+				},
+				"description": "(public route)\nbody{\n\temail:string,\n\tpassword:string\n}"
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "admin@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "admin",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password123",
+							"type": "text"
+						},
+						{
+							"key": "confirm",
+							"value": "password123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"register"
+					]
+				},
+				"description": "(public route)\nbody{\n\temail:string,\n\tname:string.\n\tpassword:string,\n\tconfirm:string\n}"
+			},
+			"response": []
+		},
+		{
+			"name": "Get all customers",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6IktlbnRrZW50Mjc5N0BnbWFpbC5jb20iLCJleHAiOjE1NjUxMTQ1MjB9.y__lsOqYDvtH1rC1Ek2mdqMsqUN9QQLFpogy79WNDMM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:5000/customers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"customers"
+					]
+				},
+				"description": "(private route)"
+			},
+			"response": []
+		},
+		{
+			"name": "Get customer by id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6IktlbnRrZW50Mjc5N0BnbWFpbC5jb20iLCJleHAiOjE1NjUxMTQ1MjB9.y__lsOqYDvtH1rC1Ek2mdqMsqUN9QQLFpogy79WNDMM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:5000/customers/20",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"customers",
+						"20"
+					]
+				},
+				"description": "(private route)\nparam:id"
+			},
+			"response": []
+		},
+		{
+			"name": "Update a customer",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6IktlbnRrZW50Mjc5N0BnbWFpbC5jb20iLCJleHAiOjE1NjUxMTQ1MjB9.y__lsOqYDvtH1rC1Ek2mdqMsqUN9QQLFpogy79WNDMM",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Customer20",
+							"type": "text"
+						},
+						{
+							"key": "dob",
+							"value": "1991-11-27 00:00:00",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/customers/20",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"customers",
+						"20"
+					]
+				},
+				"description": "(private route)\nparam:id\nbody{\n\tname:string.\n\tdob:string\n}"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a customer",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6IktlbnRrZW50Mjc5N0BnbWFpbC5jb20iLCJleHAiOjE1NjUxMTQ5MTl9.GR2KCLB8y3cUVx7m4Ntyoyi5DiUyvI3aJqNOjGqGiJA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:5000/customers/20",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"customers",
+						"20"
+					]
+				},
+				"description": "(private route)\nparam:id"
+			},
+			"response": []
+		},
+		{
+			"name": "Get the youngest customers",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6IktlbnRrZW50Mjc5N0BnbWFpbC5jb20iLCJleHAiOjE1NjUxMTUwMzZ9.O75mRCfRdwX05JHrTZp22aiCBd4Y_0uYMtqySYQfVqQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:5000/youngest_customers/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"youngest_customers",
+						"3"
+					]
+				},
+				"description": "(private route)\nparam:limit"
+			},
+			"response": []
+		},
+		{
+			"name": "Create customer",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6IktlbnRrZW50Mjc5N0BnbWFpbC5jb20iLCJleHAiOjE1NjUxMTUwMzZ9.O75mRCfRdwX05JHrTZp22aiCBd4Y_0uYMtqySYQfVqQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "new customer",
+							"type": "text"
+						},
+						{
+							"key": "dob",
+							"value": "1991-11-27 00:00:00",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/customers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"customers"
+					]
+				},
+				"description": "(private route)\nbody{\n\tname:string,\n\tdob:string\n}"
+			},
+			"response": []
+		}
+	]
+}

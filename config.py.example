@@ -1,0 +1,7 @@
+mysql = dict(
+    host = 'localhost',
+    user = 'root',
+    password = '',
+    db = 'customer_manager'
+)
+secret = 'secret'
