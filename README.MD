@@ -37,14 +37,6 @@ pipenv install
 python app.py
 ```
 
-### **3. Run Pipenv Shell**
-
-```bash
-pipenv shell
-pipenv install
-python app.py
-```
-
 ## API Documentation
 
 - To check the API Endpoints please open the `CustomerManager.postman_collection.json` file using Postman.
