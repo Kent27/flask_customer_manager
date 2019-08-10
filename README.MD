@@ -33,6 +33,7 @@ cp config.py.example config.py
 
 ```bash
 pipenv shell
+pipenv install
 python app.py
 ```
 
@@ -40,6 +41,7 @@ python app.py
 
 ```bash
 pipenv shell
+pipenv install
 python app.py
 ```
 

@@ -7,6 +7,11 @@ verify_ssl = true
 
 [packages]
 flask = "*"
+flask-mysqldb = "*"
+passlib = "*"
+jwt = "*"
+wtforms = "*"
+pyjwt = "*"
 
 [requires]
 python_version = "3.7"
